@@ -27,7 +27,9 @@ def list_df_POStag(s):
     list_of_df=[]
     for sent in s:
         
-        list_of_df.append(pd.DataFrame(nltk.pos_tag(WordPunctTokenizer().tokenize(str(sent).strip("b\" ,()f,                                                                                       .:;'\\").removesuffix("\\n").strip(                                                                                                ",. ;:'\"'"))),columns=['word','POS']))
+        list_of_df.append(pd.DataFrame(nltk.pos_tag(WordPunctTokenizer().tokenize(str(sent).strip("b\" ,()f,    
+                                                                                                  .:;'\\").removesuffix("\\n").strip(
+                                                                                                    ",. ;:'\"'"))),columns=['word','POS']))
         
     return list_of_df  
 
